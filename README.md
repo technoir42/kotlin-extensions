@@ -7,10 +7,6 @@ Personal collection of handy Kotlin extensions.
 
 ## Usage
 ```gradle
-repositories {
-    maven { url "https://dl.bintray.com/sch/maven" }
-}
-
 dependencies {
     implementation "com.github.technoir42:kotlin-extensions:(insert latest version)"
 }
