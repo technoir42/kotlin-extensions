@@ -13,6 +13,11 @@ class ExtensionsTest {
     }
 
     @Test
+    fun Sequence_startWith() {
+        assertEquals(listOf(1, 2, 3, 4), sequenceOf(2, 3, 4).startWith(1).toList())
+    }
+
+    @Test
     fun Pair_plus() {
         assertEquals(Triple(1.0, 2, "3"), Pair(1.0, 2) + "3")
     }

@@ -6,6 +6,10 @@ inline fun <T : Any> List<T>.replaceIf(predicate: (T) -> Boolean, replacer: (T) 
     return map { if (predicate(it)) replacer(it) else it }
 }
 
+inline fun <T> Sequence<T>.startWith(item: T): Sequence<T> {
+    return sequenceOf(item) + this
+}
+
 inline operator fun <A, B, C> Pair<A, B>.plus(value: C): Triple<A, B, C> = Triple(first, second, value)
 
 inline fun String?.nullIfEmpty(): String? = if (isNullOrEmpty()) null else this
